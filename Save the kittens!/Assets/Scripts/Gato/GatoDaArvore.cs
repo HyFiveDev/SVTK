@@ -3,8 +3,9 @@ using UnityEngine.Serialization;
 
 public class GatoDaArvore : MonoBehaviour
 {
-    public bool escalando; 
+    public bool escalando;
     [SerializeField] private Collider2D coll;
+    [SerializeField] private GatoForaDaArvore gatoArvore;
     private void Start()
     {
         coll.enabled = false;
@@ -27,7 +28,7 @@ public class GatoDaArvore : MonoBehaviour
     private void Update()
     {
 
-        if (escalando) coll.enabled = true;
+        if (escalando || gatoArvore.JaEscalou) coll.enabled = true;
         else coll.enabled = false;
         
     }

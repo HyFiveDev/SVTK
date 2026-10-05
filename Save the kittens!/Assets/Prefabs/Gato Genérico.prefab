@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 7346524339970112793}
   - component: {fileID: -7914618526622526527}
   - component: {fileID: -4524808441526167429}
-  - component: {fileID: -1101470186345897631}
+  - component: {fileID: 2983670975669741190}
   m_Layer: 3
-  m_Name: "Gato Gene\u0301rico"
+  m_Name: "Gato Gen\xE9rico"
   m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CatId
   catID: 0
   gameManager: {fileID: 0}
---- !u!114 &-1101470186345897631
+  gatoSalvoNaArvore: 0
+--- !u!114 &2983670975669741190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

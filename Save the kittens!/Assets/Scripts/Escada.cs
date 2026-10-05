@@ -7,6 +7,8 @@ public class Escada : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Referências")]
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private GatoDaArvore arvore;
+        [SerializeField] PegarItem pegarItem;
     public Vector2 posicao;
     
     
@@ -16,8 +18,8 @@ public class Escada : MonoBehaviour
     public bool escadaPosicionada;
     public int estadoEscada = 0;
     private GameObject item;
-    [SerializeField] PegarItem pegarItem;
-    [SerializeField] private GatoDaArvore arvore;
+
+
     
     void Start()
     {
@@ -32,8 +34,7 @@ public class Escada : MonoBehaviour
         if(gameManager.AcaoPegar() && estadoEscada == 2 && !arvore.escalando) PegarEscada();
         if (gameManager.itemCarregado == null) return;
         item = gameManager.itemCarregado;
-        if (estadoEscada == 0 && !item.CompareTag("Escada")) return;
-        if (estadoEscada == 1 && gameManager.AcaoPegar() && !pegarItem.carregando) ColocarEscada();
+        if (estadoEscada == 1 && gameManager.AcaoPegar() && pegarItem.carregando && item.CompareTag("Escada")) ColocarEscada();
     }
     
     
@@ -58,8 +59,10 @@ public class Escada : MonoBehaviour
     {
         escada.SetActive(true);
         Destroy(item);
+        gameManager.itemCarregado = null;
         escadaPosicionada = true;
         pegarItem.carregando = false;
+        pegarItem.item = null;
     }
 
     private void PegarEscada()

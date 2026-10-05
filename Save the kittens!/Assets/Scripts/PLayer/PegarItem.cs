@@ -19,7 +19,7 @@ public class PegarItem : MonoBehaviour
  
     public bool carregando = false;
     
-    private GameObject item;
+    public GameObject item;
     private SpriteRenderer itemSprite;
     private SpriteRenderer gObjSprite;
     
@@ -84,6 +84,7 @@ public class PegarItem : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Item") && !carregando)
         {
             item = null;
+            gameManager.itemCarregado = null;
         }
 
         
