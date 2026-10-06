@@ -32,9 +32,8 @@ public class Escada : MonoBehaviour
     void Update()
     {
         if(gameManager.AcaoPegar() && estadoEscada == 2 && !arvore.escalando) PegarEscada();
-        if (gameManager.itemCarregado == null) return;
         item = gameManager.itemCarregado;
-        if (estadoEscada == 1 && gameManager.AcaoPegar() && pegarItem.carregando && item.CompareTag("Escada")) ColocarEscada();
+        if (estadoEscada == 1 && gameManager.AcaoPegar() && !pegarItem.carregando && item.CompareTag("Escada")) ColocarEscada();
     }
     
     
@@ -67,7 +66,6 @@ public class Escada : MonoBehaviour
 
     private void PegarEscada()
     {
-        print("metodo está sendo chamado");
         escada.SetActive(false);
         Instantiate(escadaPrefab, posicao, Quaternion.identity);
         escadaPosicionada = false;

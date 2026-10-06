@@ -13,6 +13,7 @@ public class GatoForaDaArvore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.itemCarregado == null) return;
         if(gameManager.itemCarregado.name == gameObject.name) JaEscalou = true;
     }
 }

@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Escada
   gameManager: {fileID: 539357401}
-  arvore: {fileID: 717920101}
+  arvore: {fileID: 1319167080}
   pegarItem: {fileID: 2915664}
   posicao: {x: -10, y: -1}
   escadaPrefab: {fileID: 3576951620383336903, guid: 287c24546070c4ab1a41b6e40af09410, type: 3}
@@ -3419,11 +3419,6 @@ MonoBehaviour:
   painelGatos: {fileID: 976781866}
   HUD: {fileID: 797193831}
   indicadorDePontoSalvo: {fileID: 590132386}
---- !u!61 &554193935 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: -7914618526622526527, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
-  m_PrefabInstance: {fileID: 2110445871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &567361345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3694,7 +3689,6 @@ GameObject:
   m_Component:
   - component: {fileID: 601502149}
   - component: {fileID: 601502152}
-  - component: {fileID: 601502151}
   - component: {fileID: 601502150}
   m_Layer: 0
   m_Name: EscadaNaArvore (1)
@@ -3764,21 +3758,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &601502151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601502148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad09690b1649e41148f6ad32f3536a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GatoDaArvore
-  escalando: 0
-  coll: {fileID: 554193935}
-  gatoArvore: {fileID: 0}
 --- !u!212 &601502152
 SpriteRenderer:
   serializedVersion: 2
@@ -4150,7 +4129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 711551775}
   - component: {fileID: 711551774}
-  - component: {fileID: 711551772}
   - component: {fileID: 711551773}
   m_Layer: 0
   m_Name: EscadaNaArvore (2)
@@ -4159,21 +4137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &711551772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711551771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad09690b1649e41148f6ad32f3536a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GatoDaArvore
-  escalando: 0
-  coll: {fileID: 554193935}
-  gatoArvore: {fileID: 0}
 --- !u!61 &711551773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4304,7 +4267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 717920099}
   - component: {fileID: 717920102}
-  - component: {fileID: 717920101}
   - component: {fileID: 717920100}
   m_Layer: 0
   m_Name: EscadaNaArvore (0)
@@ -4374,21 +4336,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &717920101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717920098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad09690b1649e41148f6ad32f3536a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GatoDaArvore
-  escalando: 0
-  coll: {fileID: 554193935}
-  gatoArvore: {fileID: 0}
 --- !u!212 &717920102
 SpriteRenderer:
   serializedVersion: 2
@@ -5143,7 +5090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Escada
   gameManager: {fileID: 539357401}
-  arvore: {fileID: 711551772}
+  arvore: {fileID: 1319167080}
   pegarItem: {fileID: 2915664}
   posicao: {x: -10, y: -1}
   escadaPrefab: {fileID: 3576951620383336903, guid: 287c24546070c4ab1a41b6e40af09410, type: 3}
@@ -5444,7 +5391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Escada
   gameManager: {fileID: 539357401}
-  arvore: {fileID: 601502151}
+  arvore: {fileID: 1319167080}
   pegarItem: {fileID: 2915664}
   posicao: {x: -10, y: -1}
   escadaPrefab: {fileID: 3576951620383336903, guid: 287c24546070c4ab1a41b6e40af09410, type: 3}
@@ -7932,6 +7879,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GatoForaDaArvore
   JaEscalou: 0
   gameManager: {fileID: 539357401}
+--- !u!114 &1319167080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319167070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad09690b1649e41148f6ad32f3536a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GatoDaArvore
+  escalando: 0
+  JaEscalou: 0
+  gameManager: {fileID: 0}
+--- !u!70 &1319167085
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319167070}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -2.5}
+  m_Size: {x: 1, y: 3}
+  m_Direction: 0
 --- !u!1 &1360657893
 GameObject:
   m_ObjectHideFlags: 0
@@ -10503,11 +10502,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297073426961593540, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.84
+      value: -14.332
       objectReference: {fileID: 0}
     - target: {fileID: 4297073426961593540, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.89
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 4297073426961593540, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10552,6 +10551,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3365037936602827829, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1319167076}
+    - targetCorrespondingSourceObject: {fileID: 3365037936602827829, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319167080}
+    - targetCorrespondingSourceObject: {fileID: 3365037936602827829, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319167085}
   m_SourcePrefab: {fileID: 100100000, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
 --- !u!1 &2123133943
 GameObject:
