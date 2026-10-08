@@ -8,11 +8,15 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private UIManager ui;
 
-    [Header("gatos")] public bool[] catIsFounded;
-
-    [SerializeField] private int gatos = 5;
-
-    [Header("spawn dos gatos")] public bool[] pontosLivres;
+    [Header("gatos")]
+    public bool[] catIsFounded;
+    public bool[] catIsSaved;
+    
+    [SerializeField] public int gatosTotais = 5;
+    public int gatosSalvos = 0;
+    
+    [Header("spawn dos gatos")]
+    public bool[] pontosLivres;
     public GameObject[] pontosSpawn;
 
     [Header("itens")] public GameObject itemCarregado;
@@ -34,7 +38,8 @@ public class GameManager : MonoBehaviour
         pontosLivres = new bool[pontosSpawn.Length];
         for (int i = 0; i < pontosLivres.Length; i++) pontosLivres[i] = false;
 
-        catIsFounded = new bool[gatos];
+        catIsFounded = new bool[gatosTotais];
+        catIsSaved = new bool[gatosTotais];
     }
 
     private void OnEnable()
@@ -56,10 +61,25 @@ public class GameManager : MonoBehaviour
 
     public void ColetarGatos(int id)
     {
-        ui.AtualizarCatalogo(id);
-        catIsFounded[id] = true;
+        if (!catIsFounded[id])
+        {
+            ui.AtualizarCatalogo(id);
+            catIsFounded[id] = true;
+        }
     }
 
+    public void SalvarGatos(int id)
+    {
+
+        if (!catIsSaved[id])
+        {
+            gatosSalvos++;
+            ui.AtualizarGatosSalvos(gatosSalvos);
+            catIsSaved[id] = true;
+        }
+     
+    }
+    
     public bool AcaoPegar()
     {
 

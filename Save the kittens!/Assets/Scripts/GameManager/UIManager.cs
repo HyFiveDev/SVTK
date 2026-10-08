@@ -29,8 +29,14 @@ public class UIManager : MonoBehaviour
     {
     }
 
+    public void AtualizarGatosSalvos(int gatosSalvos)
+    {
+        print(gatosSalvos);
+    }
+    
     public void AlternarPontoSalvar(bool alternar)
     {
         indicadorDePontoSalvo.SetActive(alternar);
     }
+    
 }

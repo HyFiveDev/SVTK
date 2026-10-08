@@ -3,38 +3,19 @@ using UnityEngine.Serialization;
 
 public class GatoDaArvore : MonoBehaviour
 {
-    public bool escalando;
+
     public bool JaEscalou;
     private Collider2D coll;
-    private CapsuleCollider2D capsule;
-    private GatoForaDaArvore gatoArvore;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private VerificarEscalando escalar;
     private void Start()
     {
         coll = GetComponent<Collider2D>();
-        capsule = GetComponent<CapsuleCollider2D>();
-        gatoArvore = GetComponent<GatoForaDaArvore>();
         coll.enabled = false;
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            escalando = true;
-
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {    
-        if (other.CompareTag("Player"))
-        { 
-            escalando = false;
-        }
     }
     private void Update()
     {
-
-        if (escalando || JaEscalou)
+        if (escalar.escalando || JaEscalou)
         { 
             coll.enabled = true;
         }
@@ -44,7 +25,6 @@ public class GatoDaArvore : MonoBehaviour
         if (gameManager.itemCarregado.name == gameObject.name)
         {
             JaEscalou = true;
-            Destroy(capsule);
         }
     }
 }

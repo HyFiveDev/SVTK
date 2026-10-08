@@ -75,7 +75,7 @@ public class PegarItem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
- 
+    
         if (other.gameObject.CompareTag("PontoSalvar") && item.CompareTag("Gato") && carregando)
         {
             pontoSalvar = null;
@@ -106,11 +106,14 @@ public class PegarItem : MonoBehaviour
 
     private void SalvarGato()
     {
+        if (gameManager.itemCarregado.tag != "Gato") return;
+        CatId cat = gameManager.itemCarregado.GetComponent<CatId>();
         item.transform.position = pontoSalvar.position;
         itemSprite.sortingOrder = 0;
         gameManager.itemCarregado = null;
         item = null;
         carregando = false;
+        gameManager.SalvarGatos(cat.catID);
         Debug.Log("Gato Salvo!");
     }
     private void SoltarItem()
