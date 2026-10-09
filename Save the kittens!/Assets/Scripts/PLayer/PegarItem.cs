@@ -75,12 +75,8 @@ public class PegarItem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-    
-        if (other.gameObject.CompareTag("PontoSalvar") && item.CompareTag("Gato") && carregando)
-        {
             pontoSalvar = null;
             pontoProximo = false;
-        }
         if (other.gameObject.layer == LayerMask.NameToLayer("Item") && !carregando)
         {
             item = null;

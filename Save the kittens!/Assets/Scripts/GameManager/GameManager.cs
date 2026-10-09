@@ -76,8 +76,12 @@ public class GameManager : MonoBehaviour
             gatosSalvos++;
             ui.AtualizarGatosSalvos(gatosSalvos);
             catIsSaved[id] = true;
+
+            if (gatosSalvos >= gatosTotais)
+            {
+                ui.TelaVitoria();
+            }
         }
-     
     }
     
     public bool AcaoPegar()
