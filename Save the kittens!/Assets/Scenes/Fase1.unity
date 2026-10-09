@@ -3088,7 +3088,7 @@ MonoBehaviour:
   - {fileID: 1084421348}
   - {fileID: 845034265}
   painelGatos: {fileID: 976781866}
-  savePan: {fileID: 0}
+  savePan: {fileID: 992357137}
   HUD: {fileID: 797193831}
   indicadorDePontoSalvo: {fileID: 590132386}
 --- !u!1001 &567361345
@@ -3200,6 +3200,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2435ac5081e48ca982546f3a5c2428, type: 3}
+--- !u!4 &570684889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8561251130336940883, guid: 94217f44ecb80454fb2371f3ef01c27f, type: 3}
+  m_PrefabInstance: {fileID: 1830222905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &586379963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4298,11 +4303,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
   m_PrefabInstance: {fileID: 857544104}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &902391680 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7481104652193559922, guid: 94217f44ecb80454fb2371f3ef01c27f, type: 3}
-  m_PrefabInstance: {fileID: 1830222905}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &976781866
 GameObject:
@@ -6848,7 +6848,7 @@ MonoBehaviour:
   pontoSpawn:
   - {fileID: 1568191377}
   - {fileID: 1426356911}
-  - {fileID: 902391680}
+  - {fileID: 570684889}
 --- !u!114 &1319167080
 MonoBehaviour:
   m_ObjectHideFlags: 0

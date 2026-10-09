@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Testes.unity
+    path: Assets/Scenes/Inicio.unity
+    guid: 51c58c2ec13004f1da5fd17a5c2477ad
+  - enabled: 1
+    path: Assets/Scenes/Fase1.unity
     guid: 459711f7803e14a208a0f68d7cf77b38
+  - enabled: 1
+    path: "Assets/Scenes/Vit\xF3ria.unity"
+    guid: 892e2e97344db41b7a4bce302e462fd3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
