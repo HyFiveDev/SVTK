@@ -9,6 +9,7 @@ public class PegarItem : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private UIManager ui;
     [SerializeField] private Transform pontoCarregar;
+   
     
     [Header("Pontos")]
     private Transform pontoSalvar;

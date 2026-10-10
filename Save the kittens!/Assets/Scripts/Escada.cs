@@ -32,7 +32,7 @@ public class Escada : MonoBehaviour
     {
         if(gameManager.AcaoPegar() && estadoEscada == 2 && !arvore.escalando) PegarEscada();
         item = gameManager.itemCarregado;
-        if (estadoEscada == 1 && gameManager.AcaoPegar() && pegarItem.carregando && item.CompareTag("Escada")) ColocarEscada();
+        if (estadoEscada == 1 && gameManager.AcaoPegar() && !pegarItem.carregando && item.CompareTag("Escada")) ColocarEscada();
     }
     
     

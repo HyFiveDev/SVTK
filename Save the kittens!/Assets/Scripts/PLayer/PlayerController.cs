@@ -5,9 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     private InputSystem_Actions inputSystemActions;
     private InputAction move;
-
     private Rigidbody2D rb;
-    
+    [SerializeField] private VerificarEscalando arvore;
 
     public float speed = 5f;
 
@@ -29,8 +28,9 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 input = move.ReadValue<Vector2>();
-        inputHorizontal = input.x;
         inputVertical = input.y;
+        if(!arvore.escalando) inputHorizontal = input.x;
+        else if(arvore.escalando) inputHorizontal = 0;
 
         // Movimentação
         rb.linearVelocity = new Vector2(inputHorizontal * speed, inputVertical * speed);

@@ -51,4 +51,9 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Vitória");
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
