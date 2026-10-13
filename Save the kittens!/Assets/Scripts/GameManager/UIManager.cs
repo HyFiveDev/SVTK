@@ -47,6 +47,11 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Fase1");
     }
 
+    public void Reiniciar()
+    {
+        SceneManager.LoadScene("Inicio");
+    }
+
     public void TelaVitoria()
     {
         SceneManager.LoadScene("Vitória");

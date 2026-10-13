@@ -66,6 +66,7 @@ public class PegarItem : MonoBehaviour
             item = collision.gameObject;
         }
 
+        if (item == null) return;
         if (collision.gameObject.CompareTag("PontoSalvar") && item.CompareTag("Gato") && carregando)
         {
             pontoProximo = true;

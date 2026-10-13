@@ -16,7 +16,7 @@ public class SummonGatoA : MonoBehaviour
 
     private void AleatorizarSpawn()
     {
-
+        
         pontoEscolhido = Random.Range(0, pontoSpawn.Length);
         gameObject.transform.position = pontoSpawn[pontoEscolhido].transform.position;
     }

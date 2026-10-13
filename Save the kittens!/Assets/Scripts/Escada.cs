@@ -23,7 +23,7 @@ public class Escada : MonoBehaviour
     
     void Start()
     {
-        escada = GameObject.Find("EscadaNaArvore "+"("+escadaID+")");
+        escada = GameObject.Find("Escada "+"("+escadaID+")");
         escada.SetActive(false);
         posicao = escada.transform.position;
     }

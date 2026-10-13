@@ -4,7 +4,12 @@ using UnityEngine;
 public class CatId : MonoBehaviour
 {
     [SerializeField] public int catID;
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     
     private void Update()
     {
