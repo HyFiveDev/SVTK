@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: -7914618526622526527}
   - component: {fileID: -4524808441526167429}
   - component: {fileID: 2983670975669741190}
+  - component: {fileID: 8220509479936012842}
   m_Layer: 3
   m_Name: "Gato Gen\xE9rico"
   m_TagString: Gato
@@ -185,8 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatId
   catID: 0
-  gameManager: {fileID: 0}
-  gatoSalvoNaArvore: 0
 --- !u!114 &2983670975669741190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,4 +198,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ade4dd16492d46959781fb22b99927a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SummonGato
-  gameManager: {fileID: 0}
+--- !u!95 &8220509479936012842
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3365037936602827829}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

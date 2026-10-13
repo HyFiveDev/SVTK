@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     private InputAction move;
     private Rigidbody2D rb;
     [SerializeField] private VerificarEscalando arvore;
-
+    [SerializeField] private PLayerAnim anim;
+    
     public float speed = 5f;
 
 
@@ -31,8 +32,9 @@ public class PlayerController : MonoBehaviour
         inputVertical = input.y;
         if(!arvore.escalando) inputHorizontal = input.x;
         else if(arvore.escalando) inputHorizontal = 0;
-
+        
         // Movimentação
         rb.linearVelocity = new Vector2(inputHorizontal * speed, inputVertical * speed);
+        anim.CheckWalkAnim(inputHorizontal, inputVertical);
     }
 }

@@ -6,9 +6,7 @@ public class VerificarEscalando : MonoBehaviour
     private BoxCollider2D box;
     private Transform player;
 
-    private void Start()
-    {
-    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.layer == LayerMask.NameToLayer("Escalavel"))

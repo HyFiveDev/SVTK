@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("Referências de UI")]
     [SerializeField] private GameObject[] catalogoDeGatos;
+    [SerializeField] private GameObject[] catalagoDesconhecido;
     [SerializeField] private GameObject painelGatos;
     [SerializeField] private TextMeshProUGUI savePan;
     [SerializeField] private GameObject HUD;
@@ -23,6 +24,7 @@ public class UIManager : MonoBehaviour
 
     public void AtualizarCatalogo(int id)
     {
+        catalagoDesconhecido[id].SetActive(false);
         catalogoDeGatos[id].SetActive(true);
         GatoNovoEncontrado();
     }
