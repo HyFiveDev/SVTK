@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -11,10 +12,28 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI savePan;
     [SerializeField] private GameObject HUD;
     private bool isOpnened = false;
-    
+
+    private InputSystem_Actions inputSystem;
+    private InputAction action;
+
     [Header("referências de mapa")]
     [SerializeField] private GameObject indicadorDePontoSalvo;
     
+    private void Awake()
+    {
+        inputSystem = new InputSystem_Actions();
+        action = inputSystem.UI.AbrirCatalogo;
+    }
+    private void OnEnable() => action.Enable();
+    private void OnDisable() => action.Disable();
+
+    private void Update()
+    {
+        if(action.WasPressedThisFrame())
+        {
+            AbrirCalogo();
+        }
+    }
     public void AbrirCalogo()
     {
         painelGatos.SetActive(!isOpnened);
